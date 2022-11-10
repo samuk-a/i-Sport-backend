@@ -7,5 +7,10 @@
   "include": [
     "src/**/*.ts",
     "test/**/*.ts"
-  ]
+  ],
+  "paths": {
+    "@core/*": ["./src/core/*"],
+    "@helper/*": ["./src/helper/*"],
+    "@interface/*": ["./src/interface/*"],
+  }
 }
