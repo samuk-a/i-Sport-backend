@@ -1,18 +1,16 @@
 {
+  "extends": "./node_modules/gts/tsconfig-google.json",
   "compilerOptions": {
     "rootDir": ".",
-    "target": "es6",
-    "module": "commonjs",
-    "outDir": "./dist",
     "baseUrl": ".",
-    "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true,
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
     "paths": {
+      "@controller/*": ["src/controller/*"],
       "@core/*": ["src/core/*"],
+      "@exception/*": ["src/exception/*"],
       "@helper/*": ["src/helper/*"],
       "@interface/*": ["src/interface/*"],
       "@lib/*": ["src/lib/*"],

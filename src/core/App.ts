@@ -7,12 +7,13 @@ export default class App {
   public app: Application;
   public port: number;
 
-  constructor(appInit: { port: number, middlewares: any, controllers: any }) {
+  constructor(appInit: { port: number, preMiddlewares: any, posMiddlewares: any, controllers: any }) {
     this.app = express();
     this.port = appInit.port
 
-    this.middlewares(appInit.middlewares);
+    this.middlewares(appInit.preMiddlewares);
     this.routes(appInit.controllers);
+    this.middlewares(appInit.posMiddlewares);
   }
 
   private middlewares(middlewares: { forEach: (arg0: (middleware: any) => void) => void; }) {

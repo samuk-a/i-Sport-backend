@@ -4,6 +4,7 @@ logging.configure({
   minLevels: {
     '': 'info',
     'core': 'warn',
-    'middleware': 'info'
+    'middleware': 'info',
+    'server': 'error'
   }
 }).registerConsoleLogger();
