@@ -16,5 +16,3 @@ const app = new App({
     errorMiddleware
   ]
 });
-
-app.listen();
